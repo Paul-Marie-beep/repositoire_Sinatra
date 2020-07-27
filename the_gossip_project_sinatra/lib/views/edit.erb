@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title> Éditer un potin</title>
+  </head>
+  <body>
+    <h1>Édite un potin !</h1>
+    <p>Balance tes corrections via le formulaire ci-dessous</p>
+    <form action= '/gossips/<%= "#{params['id']}" %>/edit' method='POST'>                         <!Bien faire gaffe à l'écrire comme une string: balise <*= %> + guillemets>
+      Saisis ici le nouvel auteur du potin :  <input type='text' name='new_gossip_author'/><br/> 
+      Balance le nouveau potin : <input type='text' name='new_gossip_content'/><br/> 
+      <input type='submit'/>
+
+    </form>
+  </body>
+</html>

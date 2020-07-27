@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+ <h1> Bienvenue</h1>
+  <p> Tu peut aller créer un nouveau potin <a href="/gossips/new/">ICI</a></p>
+   <br/>
+   <% gossips.each_with_index do |gossip, index| %>     <!L'intéret du with index vient pour les url. Sinon, pour le nom et le contenu, un .each tout bête marcherait très bien. Cela permet d'assigner un numéro croissant à chauque entrée du tableau et, ici, d'avoir in fine une liste numérotée >
+    <p>
+      <%= gossip.author %><br/>
+      <%= gossip.content %><br/>
+      <%   %>
+      <p> <a href = <%= "./gossips/#{index} "%> >  Clique sur le lien pour accéder au potin</a> </p>         <! À noter: l'url du lien est codée comme une string. >
+
+    </p>
+  <% end %>
+     </body>
+</html>
+
+<! En fait, <% %> te sert à exécuter du Ruby au sein d'un fichier HTML. Par exemple pour faire un each do.>
+    <! #Par contre <%= %> va te servir à afficher un string Ruby qui est entre ces balises (c'est l'équivalent d'un puts mais sur du HTML). > 
+

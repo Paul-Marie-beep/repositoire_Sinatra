@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title> PAGE POTIN </title>
+  </head>
+  <body>
+    <h1>  PAGE POTIN </h1>
+    <br/>
+    <%= "Voici la page du potin n°#{params['id']}" %>                   <! on rechoppe le id du potin qu'on nous donne avec param>
+    <br/> 
+    <%= "Son auteur: #{gossip_found.author}"%><br/>                     <!On choppe l'auteur avec la constante gossip_found qu'on a introduite dans le controller>
+
+    <%= "Le contenu du potin: #{gossip_found.content}" %><br/>          <! idem pour le contenu du potin>
+
+    <p> Clique sur le <a href= "/"> lien</a> pour revenir à la page d'acceuil </p> <! C'est un lien pour revenir à la page d'accueil>
+
+    <p> Si tu veux éditer ton potin, clique <a href = <%= "./#{params['id']}/edit" %> > ici </a> </p>   <! On traite l'URL du lien comme une string >
+
+    
+  </body>
+  </html>
+
+  
+
